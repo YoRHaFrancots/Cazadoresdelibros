@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pagina de reviews de libros" />
+    <title>Login</title>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="shortcut icon" href="/Assets/Logo.png" type="image/png" />
+  </head>
+  <body class="d-flex flex-column vh-100 justify-content-between bg-body-login bg-body-login">
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html"
+            ><img class="logo" src="/Assets/Logo.png" alt="Logo de Cazadores"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/about.html"
+                  >Acerca de nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Pages/contact.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Pages/gallery.html"
+                  >Próximas Reviews</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#suscripcionModal"
+                  >Suscripción</a
+                >
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-warning">Login</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="row mt-5">
+        <h2 class="mt-5 text-center text-white sombra-login">Iniciar sesión</h2>
+      </div>
+
+      <section class="row mt-5 mb-5">
+        <div class="col">
+          <div class="card mt-3 bg-dark text-white">
+            <div class="row g-0">
+              <div class="col-md-7 col-lg-6">
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="Usuario" class="form-label">Usuario</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Nombre"
+                        placeholder="Inserte Usuario"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="Contraseña" class="form-label"
+                        >Contraseña</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Inserte Contraseña"
+                      />
+                    </div>
+
+                    <div class="mb-3 text-center">
+                      <button class="btn btn-warning col-6">
+                        Iniciar sesión
+                      </button>
+                    </div>
+                    <div class="mb-3 text-center">
+                      <a
+                        href="/Pages/Error404.html"
+                        class="btn btn-primary col-6"
+                        >Ingresá con Facebook</a
+                      >
+                    </div>
+                    <div class="mb-3 text-center mb-3">
+                      <button
+                        type="button"
+                        class="btn text-white"
+                        data-bs-toggle="modal"
+                        data-bs-target="#recuperar"
+                      >
+                        <small>Ayuda, no puedo iniciar sesión</small>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-5 col-lg-6 d-none d-md-block img-login">
+                <img
+                  src="/Assets/img-login.jpg"
+                  class="img-fluid rounded-start rounded-bottom rounded-top"
+                  alt="Computador en mesa"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="img-contacto d-none d-sm-block">
+        <img src="/assets/01-lugar.jpg" alt="">
+      </div> -->
+    </main>
+    <footer class="bg-dark container-fluid footer">
+      <section
+        class="row py-5 flex-column flex-md-row text-center align-items-center gap-3"
+      >
+        <div class="col logo-footer">
+          <img src="/Assets/Logo.png" alt="logo" />
+        </div>
+        <div class="col text-white text-center d-flex justify-content-around">
+          <a href="/Pages/Error404.html" class="text-warning"
+            ><i class="fa fa-instagram fa-2x" aria-hidden="true"></i
+          ></a>
+          <a href="/Pages/Error404.html" class="text-warning"
+            ><i class="fa fa-twitter fa-2x" aria-hidden="true"></i
+          ></a>
+          <a href="/Pages/Error404.html" class="text-warning"
+            ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="col text-white text-center">
+          <small>Cazadores de libros&copy;</small>
+        </div>
+      </section>
+    </footer>
+    <div
+      class="modal fade"
+      id="recuperar"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalForgotPasswordLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5
+              class="modal-title mb-2 text-white"
+              id="modalForgotPasswordLabel"
+            >
+              Recuperar contraseña
+            </h5>
+
+            <span aria-hidden="true">&times;</span>
+          </div>
+          <div class="modal-body mb-2">
+            <p class="text-white">
+              Ingrese su dirección de correo electrónico para recuperar su
+              contraseña:
+            </p>
+            <form>
+              <div class="form-group mb-2 text-white">
+                <label for="email">Correo electrónico:</label>
+                <input
+                  type="email"
+                  class="form-control custom-input"
+                  id="email"
+                  placeholder="Ingrese su correo electrónico"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-warning">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="suscripcionModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="suscripcionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title text-white" id="suscripcionModalLabel">
+              Suscripción al Blog
+            </h5>
+
+            <span aria-hidden="true">&times;</span>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group text-white mb-3">
+                <label for="nombreInput">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreInput"
+                  placeholder="Ingresa tu nombre"
+                />
+              </div>
+              <div class="form-group text-white mb-3">
+                <label for="emailInput">Correo electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  placeholder="Ingresa tu correo electrónico"
+                />
+              </div>
+              <button type="submit" class="btn btn-warning">Suscribirse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+  </body>
+</html>
